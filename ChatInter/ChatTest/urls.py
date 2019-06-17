@@ -4,5 +4,5 @@ from django.conf.urls import url
 app_name = 'ChatTest'
 
 urlpatterns = [
-        url(r'^test/$', views.main, name='main')
+        url(r'^$', views.main, name='main')
 ]

@@ -76,14 +76,14 @@ def chatty(user_input):
     	return chat.respond(user_input)
 
 def non_technical():
-	print("Choose from below options your problem\n")
-	print("1. Assignment is locked or Unable to Submit the Assignment")
-	print("2. Quiz is still locked")
-	print("3. Providing Certificate after course completion")
-	print("4. Didn't recieve mail after submitting assignment")
-	print("5. Extension of Assignment Date")
-	print("6. I want to resubmit assignment")
-	problem = input("Enter you problem: ")
+	# print("Choose from below options your problem\n")
+	# print("1. Assignment is locked or Unable to Submit the Assignment")
+	# print("2. Quiz is still locked")
+	# print("3. Providing Certificate after course completion")
+	# print("4. Didn't recieve mail after submitting assignment")
+	# print("5. Extension of Assignment Date")
+	# print("6. I want to resubmit assignment")
+	# problem = input("Enter you problem: ")
 	num = random()
 	if num not in universal_list:
 		universal_list.append(num)
@@ -106,14 +106,14 @@ def chatbot_function(user_input):
 	# from tqdm import tqdm
 	# for i in tqdm(range(10)):
 	# 	time.sleep(0.09)
-	print("Hi, I'm EduBot and I chat alot") #default message at the start
-	print("To start a conversation with me start typing and for other queries choose appropriate tab")
-	print("---------------------------------------------")
-	print("1. Assignments/ Quiz Submission and Deadline Extension related Queries")
-	print("2. Technical Queries such as Coding Problem")
-	print("3. Assignment Questions Guidance Related Queries")
-	print("4. Others")
-	print("Enter your choice from 1 to 4 and to communicate with bot start typing")
+	# print("Hi, I'm EduBot and I chat alot") #default message at the start
+	# print("To start a conversation with me start typing and for other queries choose appropriate tab")
+	# print("---------------------------------------------")
+	# print("1. Assignments/ Quiz Submission and Deadline Extension related Queries")
+	# print("2. Technical Queries such as Coding Problem")
+	# print("3. Assignment Questions Guidance Related Queries")
+	# print("4. Others")
+	# print("Enter your choice from 1 to 4 and to communicate with bot start typing")
 	while True:
 		user_input = user_input.strip()
 		if user_input == 'quit' or user_input == 'exit': 

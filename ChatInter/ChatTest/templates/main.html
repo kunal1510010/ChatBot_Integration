@@ -1,0 +1,116 @@
+
+{% block content %}
+{% load static %}
+<html>
+<head>
+  <title>EduBot(beta)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+body {
+    background: #1c2329;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+center {
+    color: #ffffff;
+    font-family: 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    text-indent: 30px;
+    margin: 0;
+
+}
+
+.bot-text{
+    border: 1px solid #ffffff;
+    margin-bottom: 50px;
+}
+
+.note-text{
+    margin-top: 10px;
+}
+center:hover { color: #ffffff }
+label {
+    color: #ffffff;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img alt="Logo" src="{% static '../static/images/edugrad-logo.png' %}" style="width:20%;">
+            </div>
+            <div class="col-12">
+                <div class="bot-text">
+                    <center>{{ message}}</center>
+                </div>
+                <div class = 'main'>
+                    <div>
+                       <form method="POST">
+                         {% csrf_token %}
+                         <div class="register-top-grid">
+                             <div class="center" data-wow-delay="0.4s">
+                                 {{ form.question.errors }}
+                                 <span><label>Say Something:<label>*</label></label></span>
+                                 {{ form.question }}
+                             </div>
+                             <fieldset class="">
+                                 <button type="button" class="btn btn-primary">
+                                    <input class="btn" type="submit" name="submit" value="Submit">
+                                 </button>
+                             </fieldset>
+                         </div>
+                     </form>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="note-text">
+                    <center><strong>NOTE</strong></center>
+                    <center>Choose from below options your problem</center>
+                    <center>1. Assignment is locked or Unable to Submit the Assignment</center>
+                    <center>2. Quiz is still locked</center>
+                    <center>3. Providing Certificate after course completion</center>
+                    <center>4. Didn't recieve mail after submitting assignment</center>
+                    <center>5. Extension of Assignment Date</center>
+                    <center>6. I want to resubmit assignment</center>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+</body>
+</html>
+{% endblock %}
