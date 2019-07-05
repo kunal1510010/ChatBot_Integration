@@ -6,7 +6,9 @@ ChatterBot==1.0.5
 chatterbot-corpus==1.2.0
 cymem==2.0.2
 Django==2.2.2
+gunicorn==19.9.0
 idna==2.8
+jsonmerge==1.6.1
 jsonschema==3.0.1
 mathparse==0.1.2
 murmurhash==1.0.2
@@ -30,3 +32,4 @@ thinc==7.0.4
 tqdm==4.32.1
 urllib3==1.25.3
 wasabi==0.2.2
+whitenoise==4.1.2
